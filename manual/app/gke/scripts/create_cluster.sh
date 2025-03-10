@@ -31,7 +31,7 @@ else
         --disk-size 50 \
         --enable-ip-alias \
         --enable-network-policy \
-        --cluster-ipv4-cidr 10.0.0.0/16 \
+        # --cluster-ipv4-cidr 10.0.0.0/16 \
         --logging="SYSTEM,API_SERVER,WORKLOAD" \
         --monitoring="SYSTEM,API_SERVER,POD,DEPLOYMENT,STATEFULSET,STORAGE" \
         --maintenance-window-start 2025-03-11T04:00:00Z \
