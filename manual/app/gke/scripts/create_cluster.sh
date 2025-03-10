@@ -10,6 +10,7 @@ RETRY_INTERVAL=30
 echo "Creating GKE cluster '$CLUSTER_NAME'..."
 gcloud container clusters create $CLUSTER_NAME \
     --region $REGION \
+    --network demo \
     --num-nodes 2 \
     --machine-type e2-small \
     --enable-autoscaling \
