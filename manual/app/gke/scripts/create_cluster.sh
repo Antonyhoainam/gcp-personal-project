@@ -16,10 +16,10 @@ check_cluster_exist() {
   fi
 }
 # Create GKE cluster
-echo "Creating GKE cluster '$CLUSTER_NAME'..."
 if check_cluster_exist; then
     echo "Cluster '$CLUSTER_NAME' is existing."
 else
+    echo "Creating GKE cluster '$CLUSTER_NAME'..."
     gcloud container clusters create $CLUSTER_NAME \
         --region $REGION \
         --network demo \
