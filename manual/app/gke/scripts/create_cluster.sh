@@ -22,6 +22,7 @@ else
     gcloud container clusters create $CLUSTER_NAME \
         --region $REGION \
         --network demo \
+        --subnetwork demo-subnet \
         --num-nodes 2 \
         --machine-type e2-small \
         --enable-autoscaling \
