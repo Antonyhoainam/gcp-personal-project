@@ -15,6 +15,7 @@ gcloud container clusters create $CLUSTER_NAME \
     --enable-autoscaling \
     --min-nodes 1 \
     --max-nodes 3 \
+    --disk-size 50 \
     --enable-ip-alias \
     --enable-network-policy \
     --cluster-ipv4-cidr 10.0.0.0/14 \
