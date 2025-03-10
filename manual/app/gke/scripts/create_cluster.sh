@@ -10,11 +10,11 @@ RETRY_INTERVAL=30
 echo "Creating GKE cluster '$CLUSTER_NAME'..."
 gcloud container clusters create $CLUSTER_NAME \
     --region $REGION \
-    --num-nodes 3 \
+    --num-nodes 2 \
     --machine-type e2-small \
     --enable-autoscaling \
     --min-nodes 1 \
-    --max-nodes 5 \
+    --max-nodes 3 \
     --enable-ip-alias \
     --enable-network-policy \
     --cluster-ipv4-cidr 10.0.0.0/14 \
