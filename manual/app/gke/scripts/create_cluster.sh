@@ -20,9 +20,9 @@ gcloud container clusters create $CLUSTER_NAME \
     --cluster-ipv4-cidr 10.0.0.0/14 \
     --enable-cloud-logging \
     --enable-cloud-monitoring \
-    --maintenance-window "tue:00:00-tue:06:00" \
-    --maintenance-window "wed:00:00-wed:06:00" \
-    --maintenance-window "fri:00:00-fri:06:00"
+    --maintenance-window-start 2025-03-11T04:00:00Z \
+    --maintenance-window-end 2025-03-11T10:00:00Z \
+    --maintenance-window-recurrence 'FREQ=WEEKLY;BYDAY=MO,TU,FR'
 
 # Check if the cluster creation was successful
 if [ $? -ne 0 ]; then
