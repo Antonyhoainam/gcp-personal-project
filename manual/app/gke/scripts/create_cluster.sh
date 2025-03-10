@@ -18,8 +18,8 @@ gcloud container clusters create $CLUSTER_NAME \
     --enable-ip-alias \
     --enable-network-policy \
     --cluster-ipv4-cidr 10.0.0.0/14 \
-    --enable-cloud-logging \
-    --enable-cloud-monitoring \
+    --logging="SYSTEM,API_SERVER,WORKLOAD" \
+    --monitoring="SYSTEM,API_SERVER,POD,DEPLOYMENT,STATEFULSET,STORAGE" \
     --maintenance-window-start 2025-03-11T04:00:00Z \
     --maintenance-window-end 2025-03-11T10:00:00Z \
     --maintenance-window-recurrence 'FREQ=WEEKLY;BYDAY=MO,TU,FR'
