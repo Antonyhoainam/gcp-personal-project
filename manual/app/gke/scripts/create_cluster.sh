@@ -7,8 +7,7 @@ MAX_RETRIES=60  # 30 minutes timeout with 30 seconds interval
 RETRY_INTERVAL=30
 # Check if cluster existing
 check_cluster_exist() {
-  local status=$(gcloud container clusters describe $CLUSTER_NAME --region $REGION >/dev/null 2>&1)
-  echo "Cluster status: $status"
+  gcloud container clusters describe $CLUSTER_NAME --region $REGION >/dev/null 2>&1
   if [ "$?" == "0" ]; then
     return 0
   else
