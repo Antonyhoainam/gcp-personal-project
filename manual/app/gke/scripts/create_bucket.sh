@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-BUCKET_NAME="demo-app"
+BUCKET_NAME="demo-app-bucket"
 
 # Create the bucket
 gsutil mb gs://$BUCKET_NAME/
