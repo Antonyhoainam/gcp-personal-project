@@ -31,7 +31,7 @@ else
         --disk-size 50 \
         --enable-ip-alias \
         --enable-network-policy \
-        --node-locations=["us-west1-b","us-west1-a"] \
+        --node-locations="us-west1-a" \
         --cluster-ipv4-cidr 192.168.0.0/14 \
         --logging="SYSTEM,API_SERVER,WORKLOAD" \
         --monitoring="SYSTEM,API_SERVER,POD,DEPLOYMENT,STATEFULSET,STORAGE" \
