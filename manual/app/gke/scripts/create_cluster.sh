@@ -32,7 +32,7 @@ else
         --enable-ip-alias \
         --enable-network-policy \
         --node-locations="us-west1-a" \
-        --cluster-ipv4-cidr 192.168.0.0/14 \
+        --cluster-ipv4-cidr 192.168.0.0/16 \
         --logging="SYSTEM,API_SERVER,WORKLOAD" \
         --monitoring="SYSTEM,API_SERVER,POD,DEPLOYMENT,STATEFULSET,STORAGE" \
         --maintenance-window-start 2025-03-11T04:00:00Z \
