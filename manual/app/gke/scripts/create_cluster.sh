@@ -72,4 +72,4 @@ done
 
 echo "Cluster '$CLUSTER_NAME' is not ready after 30 minutes timeout."
 exit 1
-#
+##
