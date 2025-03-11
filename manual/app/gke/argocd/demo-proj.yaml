@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo-proj
+  namespace: argocd
+spec:
+  description: "This is a demo project for Argo CD"
+  sourceRepos:
+    - 'https://github.com/Antonyhoainam/gcp-personal-project.git'
+  destinations:
+    - namespace: '*'
+      server: 'https://kubernetes.default.svc'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceBlacklist:
+    - group: '*'
+      kind: 'Event'
+  roles:
+    - name: demo-role
+      description: "A role for demo purposes"
+      policies:
+        - p, proj:demo-proj:demo-role, applications, get, demo-app/*, allow
+        - p, proj:demo-proj:demo-role, applications, sync, demo-app/*, allow
+      groups:
+        - demo-group
