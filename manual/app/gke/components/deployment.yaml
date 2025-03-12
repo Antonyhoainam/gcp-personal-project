@@ -20,19 +20,11 @@ spec:
         - name: gcr-json-key
         ports:
         - containerPort: 8080
-      #   volumeMounts:
-      #   - name: html-volume
-      #     mountPath: /usr/share/nginx/html 
-      # volumes:
-      # - name: html-volume
-      #   gcs:
-      #     bucket: demo-app-bucket-ia
-      #     path: index.html
         volumeMounts:
         - name: gcsfuse-html-volume
           mountPath: /usr/share/nginx/html 
           readOnly: true
-      serviceAccountName: demo-gke-service-account@my-kubernetetes.iam.gserviceaccount.com
+      serviceAccountName: demo-gke-service-account
       volumes:
       - name: gcsfuse-html-volume
         csi:
