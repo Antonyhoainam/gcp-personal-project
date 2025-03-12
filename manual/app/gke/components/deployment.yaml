@@ -16,8 +16,6 @@ spec:
       containers:
       - name: webserver
         image: gcr.io/my-kubernetes/demo-webserver-image:latest
-        imagePullSecrets:
-        - name: gcr-json-key
         ports:
         - containerPort: 8080
         volumeMounts:
@@ -25,6 +23,8 @@ spec:
           mountPath: /usr/share/nginx/html 
           readOnly: true
       serviceAccountName: demo-gke-service-account
+      imagePullSecrets:
+      - name: gcr-json-key
       volumes:
       - name: gcsfuse-html-volume
         csi:
