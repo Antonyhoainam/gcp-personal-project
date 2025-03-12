@@ -16,16 +16,16 @@ spec:
       containers:
       - name: webserver
         image: gcr.io/my-kubernetes/demo-webserver-image:latest
+        imagePullSecrets:
+        - name: gcr-json-key
         ports:
         - containerPort: 8080
         volumeMounts:
         - name: html-volume
-          mountPath: /usr/share/nginx/html
+          mountPath: /usr/share/nginx/html 
       volumes:
       - name: html-volume
         gcs:
           bucket: demo-app-bucket-ia
           path: index.html
-      imagePullSecrets:
-      - name: gcr-json-key
 
