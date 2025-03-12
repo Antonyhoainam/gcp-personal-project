@@ -26,3 +26,6 @@ spec:
         gcs:
           bucket: demo-app-bucket-ia
           path: index.html
+      imagePullSecrets:
+      - name: gcr-json-key
+
