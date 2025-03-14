@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: gcr.io/my-kubernetes/demo-webserver-image:latest
+        image: gcr.io/my-kubernetetes/demo-webserver-image:latest
         ports:
         - containerPort: 8080
       #   volumeMounts:
