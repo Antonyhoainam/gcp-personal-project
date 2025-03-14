@@ -18,7 +18,8 @@ spec:
       app: webserver
   template:
     metadata:
-      gke-gcsfuse/volumes: "true"
+      annotations:
+        gke-gcsfuse/volumes: "true"
       labels:
         app: webserver
     spec:
