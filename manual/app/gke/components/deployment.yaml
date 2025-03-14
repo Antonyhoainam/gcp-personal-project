@@ -5,6 +5,12 @@ metadata:
   namespace: demo
   annotations:
     gke-gcsfuse/volumes: "true"
+    gke-gcsfuse/cpu-limit: "1"
+    gke-gcsfuse/memory-limit: 500m
+    # gke-gcsfuse/ephemeral-storage-limit: 10Gi
+    gke-gcsfuse/cpu-request: 200m
+    gke-gcsfuse/memory-request: 128m
+    # gke-gcsfuse/ephemeral-storage-request: 5Gi
 spec:
   replicas: 1
   selector:
